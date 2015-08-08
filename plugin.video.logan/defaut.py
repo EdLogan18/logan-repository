@@ -21,7 +21,7 @@ from BeautifulSoup import BeautifulSoup
 h = HTMLParser.HTMLParser()
 
 
-versao = '1.1.9'
+versao = '0.0.2'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -49,7 +49,7 @@ def  categorias():
 	addDir('SÉRIES E DESENHOS 24 HORAS','https://copy.com/nEagWXhOC1s7dlyO?download=1',16,'https://copy.com/SzKOJlBKxIfEuHnp')
 	addDir('CANAIS LATINOS','https://copy.com/tapliy8nIaKSLDQq?download=1',16,'https://copy.com/wPVtPygtxuY0P1xl')
 	addDir('CANAIS DE PORTUGAL','https://copy.com/unoGFK2bL8ZJ0iHD?download=1',16,'https://copy.com/HwP6Xpia6GNQvWsi')
-	addDir('WEBCAMS','https://copy.com/Ywh4MnZQqy2R7M8P?download=1',16,'https://copy.com/dPj2J9AzaExumsnE')
+	addDir('WEBCAMS','https://copy.com/Ywh4MnZQqy2R7M8P?download=1',16,'http://static.thetechjournal.net/wp-content/uploads/2011/12/spy_256.png')
 	addDir('CANAIS HD','https://copy.com/VMoOgU8UDvAgfjv0?download=1',16,'https://copy.com/WB68NrrmvjxdH1pJ')
 	addDir('MÚSICAS E VIDEOCLIPES','https://copy.com/1cvRyOdMSOCSBH70?download=1',16,'https://copy.com/stpjErgehf9hPtwW')
 	addDir('ESPORTES INTERNACIONAIS','https://copy.com/bIIpBHwFbXMXOBBB?download=1',16,'https://copy.com/pUGvpVMDpoY09PcA')
