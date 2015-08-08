@@ -13,4 +13,20 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+
+<addon id="plugin.video.logan" name="LoganTV" version="0.0.1" provider-name="logan">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="defaut.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">Logan TV</summary>
+    <description lang="en">Assista SÃ©ries, Filmes, RÃ¡dios e Tv</description>
+	<platform>all</platform>
+  </extension>
+</addon>
 </addons>
