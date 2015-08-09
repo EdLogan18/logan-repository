@@ -21,7 +21,7 @@ from BeautifulSoup import BeautifulSoup
 h = HTMLParser.HTMLParser()
 
 
-versao = '0.0.2'
+versao = '0.0.3'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -35,7 +35,7 @@ fanart = addonfolder + '/fanart.png'
 def  menus():        		
 	dialog = xbmcgui.Dialog()
 	addDir('TV Online','-',13,'http://k12tips.50webs.com/screen_shot1.png')
-	addDir('Armagedon','-',20,'http://3.bp.blogspot.com/-PCiABMvpL1E/UDkAFJGmekI/AAAAAAAAADk/D0ZEDxCY0Ck/s1600/188103_197123240344214_819072657_n.jpg')
+	addDir('Armagedon','-',19,'http://3.bp.blogspot.com/-PCiABMvpL1E/UDkAFJGmekI/AAAAAAAAADk/D0ZEDxCY0Ck/s1600/188103_197123240344214_819072657_n.jpg')
 	addDir('Rádios','-',21,'http://2.bp.blogspot.com/-xkWOLmriFhE/ULkGb49tnpI/AAAAAAAALDk/xL3s1dfAwW0/s640/Bakelite_radio3.png')
 	
 	
@@ -76,7 +76,7 @@ def CATEGORIES():
 	#dialog.ok("Atualizado", "Addon atualizado por gutoakashi1.\nFaça sua doação para manter o addon sempre atualizado. Mande um email para akx.kodi@bol.com.br para mais informações")
 	#dialog = xbmcgui.Dialog()
 	#dialog.ok("Doações", "Quem fizer a doação mandarei por email o addon atualizado do cinefilmeshd e do megafilmesonline(em breve).\nMande um email para akx.kodi@bol.com.br")
-	addDir('Categorias','-',21,artfolder + 'categorias.jpg')
+	addDir('Categorias','-',20,artfolder + 'categorias.jpg')
 	addDir('Lançamentos','http://www.armagedomfilmes.biz/?cat=3236',2,artfolder + 'lancamentos.jpg')
 	addDir('Séries','http://www.armagedomfilmes.biz/?cat=21|1',6,artfolder + 'series.jpg')
 	addDir('Pesquisar Filmes','-',3,artfolder + 'pesquisa.jpg')
