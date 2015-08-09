@@ -53,8 +53,7 @@ def  categorias():
 	addDir('CANAIS HD','https://copy.com/VMoOgU8UDvAgfjv0?download=1',16,'https://copy.com/WB68NrrmvjxdH1pJ')
 	addDir('MÚSICAS E VIDEOCLIPES','https://copy.com/1cvRyOdMSOCSBH70?download=1',16,'https://copy.com/stpjErgehf9hPtwW')
 	addDir('ESPORTES INTERNACIONAIS','https://copy.com/bIIpBHwFbXMXOBBB?download=1',16,'https://copy.com/pUGvpVMDpoY09PcA')
-	addDir('RÁDIOS','https://copy.com/znUclLey0qF30gSd?download=1',16,'https://copy.com/fuDnLrM1Am7VNtmT')
-	
+		
 	
 
 
