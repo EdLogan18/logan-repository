@@ -17,16 +17,22 @@
 ##############BIBLIOTECAS A IMPORTAR E DEFINICOES####################
 
 import urllib,urllib2,re,xbmcplugin,xbmcgui,xbmc,xbmcaddon,HTMLParser,base64,xmltosrt,os
-from BeautifulSoup import BeautifulSoup
+import urlresolver
+import jsunpack
+from bs4 import BeautifulSoup
+try:
+    import json
+except:
+    import simplejson as json
 h = HTMLParser.HTMLParser()
 
 
-versao = '0.0.3'
+versao = '0.0.5'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
 artfolder = addonfolder + '/resources/img/'
-fanart = addonfolder + '/fanart.png'
+fanart = addonfolder + '/fanart.jpg'
  
 
 ###################################################MENUS############################################
@@ -35,8 +41,9 @@ fanart = addonfolder + '/fanart.png'
 def  menus():        		
 	dialog = xbmcgui.Dialog()
 	addDir('TV Online','-',13,'http://k12tips.50webs.com/screen_shot1.png')
-	addDir('Armagedon','-',19,'http://3.bp.blogspot.com/-PCiABMvpL1E/UDkAFJGmekI/AAAAAAAAADk/D0ZEDxCY0Ck/s1600/188103_197123240344214_819072657_n.jpg')
+	addDir('Filmes e Séries','-',19,'http://onlinenatv.com/imagens/filmes.png')
 	addDir('Rádios','-',21,'http://2.bp.blogspot.com/-xkWOLmriFhE/ULkGb49tnpI/AAAAAAAALDk/xL3s1dfAwW0/s640/Bakelite_radio3.png')
+
 	
 	
 	
@@ -45,7 +52,6 @@ def  categorias():
 	addDir('Tv Aberta','https://copy.com/Nlyj6xxWlRFKdinh?download=1',16,'https://copy.com/JvvK4Iw39ofK1rPF')
 	addDir('FUTEBOL AO VIVO','https://copy.com/xUo6eMRYOiVevL2h?download=1',16,'https://copy.com/NPRaZORymdG0FxJ1')
 	addDir('TV PAGA BRASIL','-',15,'https://copy.com/VVF8ouCl1Ghkjum8')
-	addDir('STREAMS DO YOUTUBE','https://copy.com/8QZD9AQuv4Lchd2M?download=1',17,'http://i.imgur.com/fKCIAxx.jpg')
 	addDir('SÉRIES E DESENHOS 24 HORAS','https://copy.com/nEagWXhOC1s7dlyO?download=1',16,'https://copy.com/SzKOJlBKxIfEuHnp')
 	addDir('CANAIS LATINOS','https://copy.com/tapliy8nIaKSLDQq?download=1',16,'https://copy.com/wPVtPygtxuY0P1xl')
 	addDir('CANAIS DE PORTUGAL','https://copy.com/unoGFK2bL8ZJ0iHD?download=1',16,'https://copy.com/HwP6Xpia6GNQvWsi')
@@ -71,15 +77,12 @@ def  categorias_tv_paga_brasil():
 	
 	
 def CATEGORIES():
-	#dialog = xbmcgui.Dialog()
-	#dialog.ok("Atualizado", "Addon atualizado por gutoakashi1.\nFaça sua doação para manter o addon sempre atualizado. Mande um email para akx.kodi@bol.com.br para mais informações")
-	#dialog = xbmcgui.Dialog()
-	#dialog.ok("Doações", "Quem fizer a doação mandarei por email o addon atualizado do cinefilmeshd e do megafilmesonline(em breve).\nMande um email para akx.kodi@bol.com.br")
-	addDir('Categorias','-',20,artfolder + 'categorias.jpg')
-	addDir('Lançamentos','http://www.armagedomfilmes.biz/?cat=3236',2,artfolder + 'lancamentos.jpg')
-	addDir('Séries','http://www.armagedomfilmes.biz/?cat=21|1',6,artfolder + 'series.jpg')
-	addDir('Pesquisar Filmes','-',3,artfolder + 'pesquisa.jpg')
-	addDir('Pesquisar Series','-',8,artfolder + 'pesquisa.jpg')	
+	
+	addDir('Categorias','-',20,'http://i60.tinypic.com/27yskz5.jpg')
+	addDir('Lançamentos','http://www.armagedomfilmes.biz/?cat=3236',2,'http://i57.tinypic.com/iy1vlk.jpg')
+	addDir('Séries','http://www.armagedomfilmes.biz/?cat=21|1',6,'http://i60.tinypic.com/2lne91h.jpg')
+	addDir('Pesquisar Filmes','-',3,'http://i59.tinypic.com/9tlp9c.jpg')
+	addDir('Pesquisar Series','-',8,'http://i58.tinypic.com/2ptthtf.jpg')	
 	
 def categorias_Armagedon():
 	addDir('BLURAY','http://www.armagedomfilmes.biz/?cat=5529',2,artfolder + 'bluray.jpg')
@@ -110,6 +113,7 @@ def radios():
 
 	
 def listar_videos(url):
+
 	codigo_fonte = abrir_url(url)
 	soup = BeautifulSoup(abrir_url(url))
 	content = BeautifulSoup(soup.find("div", { "class" : "bic-miniaturas" }).prettify())
@@ -124,7 +128,7 @@ def listar_videos(url):
 	addDir('Página Seguinte >>',pagenavi,2,artfolder + 'prox.png')
 
 	xbmcplugin.setContent(int(sys.argv[1]), 'movies')
-	xbmc.executebuiltin('Container.SetViewMode(503)')
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def listar_series(url):
 	pagina = str(int(url.split('|')[1])+1)
@@ -477,33 +481,7 @@ def addDir(name,url,mode,iconimage,pasta=True,total=1):
 	############Fim armagedon
 	
 	
-###############################################################FKav####################################################
-def gethtml(url):
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link = response.read()
-    soup = BeautifulSoup(link)
-    return soup
 
-def player_youtube(url):
-   	xbmcPlayer = xbmc.Player()
-        xbmcPlayer.play('plugin://plugin.video.youtube/play/?video_id=' +url)
-		
-def listar_videostxt(url):
-      for line in urllib2.urlopen(url).readlines():
-            params = line.split(',')
-            try:
-                  nome = params[0]
-                  print 'Nome: ' + nome
-                  img = params[1].replace(' http','http')
-                  print 'Img: ' + img
-                  rtmp = params[2]
-                  print 'Link: ' + rtmp
-                  addDir(nome,rtmp,11,img,False)
-            except:
-                  pass
-      xbmc.executebuiltin("Container.SetViewMode(500)")
 		
 ##########################################################################################################################	
 	
@@ -557,7 +535,7 @@ def addDir(name,url,mode,iconimage,pasta=True,total=1):
 
 	
 ############################################################################################################
-#                                               GET PARAMS                                                 #
+#                                               GET PARAMS   Armagedon                                              #
 ############################################################################################################
 
               
@@ -633,10 +611,7 @@ elif mode==16:
 	print ""
 	listar_canais(url)
 
-elif mode==17: 
-	listar_videostxt(url)
-elif mode==18:
-	player_youtube(url)	
+
                              #### Fim TV Online
 							 
 							 ######################   Armagedon   ############
