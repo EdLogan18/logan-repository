@@ -14,7 +14,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.logan" name="LoganTV" version="0.0.5" provider-name="logan">
+<addon id="plugin.video.logan" name="LoganTV" version="0.0.6" provider-name="logan">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.urlresolver" version="1.0.0"/>

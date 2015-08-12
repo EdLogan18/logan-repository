@@ -27,7 +27,7 @@ except:
 h = HTMLParser.HTMLParser()
 
 
-versao = '0.0.5'
+versao = '0.0.6'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -82,29 +82,29 @@ def CATEGORIES():
 	addDir('Lançamentos','http://www.armagedomfilmes.biz/?cat=3236',2,'http://i57.tinypic.com/iy1vlk.jpg')
 	addDir('Séries','http://www.armagedomfilmes.biz/?cat=21|1',6,'http://i60.tinypic.com/2lne91h.jpg')
 	addDir('Pesquisar Filmes','-',3,'http://i59.tinypic.com/9tlp9c.jpg')
-	addDir('Pesquisar Series','-',8,'http://i58.tinypic.com/2ptthtf.jpg')	
+	addDir('Pesquisar Series','-',8,'http://i58.tinypic.com/2ptthtf.jpg')
+          
 	
 def categorias_Armagedon():
-	addDir('BLURAY','http://www.armagedomfilmes.biz/?cat=5529',2,artfolder + 'bluray.jpg')
-	addDir('LEGENDADOS','http://www.armagedomfilmes.biz/?s=legendado',2,artfolder + 'legendados.jpg')
-	addDir('ANIMES','http://www.armagedomfilmes.biz/?cat=36',9,artfolder + 'animes.jpg')
-	addDir('ACAO','http://www.armagedomfilmes.biz/?cat=3227',2,artfolder + 'acao.jpg')
-	addDir('ANIMACAO','http://www.armagedomfilmes.biz/?cat=3228',2,artfolder + 'animacao.jpg')
-	addDir('AVENTURA','http://www.armagedomfilmes.biz/?cat=3230',2,artfolder + 'aventura.jpg')
-	addDir('COMEDIA ','http://www.armagedomfilmes.biz/?cat=3229',2,artfolder + 'comedia.jpg')
-	addDir('COMEDIA ROMANTICA','http://www.armagedomfilmes.biz/?cat=3231',2,artfolder + 'comediaro.jpg')
-	addDir('DRAMA','http://www.armagedomfilmes.biz/?cat=3233',2,artfolder + 'drama.jpg')
-	addDir('FAROESTE','http://www.armagedomfilmes.biz/?cat=18',2,artfolder + 'faroeste.jpg')
-	addDir('FICCAO CIENTIFICA','http://www.armagedomfilmes.biz/?cat=3235',2,artfolder + 'ficcao.jpg')
-	addDir('LUTAS UFC','http://www.armagedomfilmes.biz/?cat=3394',2,artfolder + 'lutas.jpg')
-	addDir('NACIONAL','http://www.armagedomfilmes.biz/?cat=3226',2,artfolder + 'nacional.jpg')
-	addDir('POLICIAL','http://www.armagedomfilmes.biz/?cat=72',2,artfolder + 'policial.jpg')
-	addDir('RELIGIOSO','http://www.armagedomfilmes.biz/?cat=20',2,artfolder + 'religioso.jpg')
-	addDir('ROMANCE','http://www.armagedomfilmes.biz/?cat=3232',2,artfolder + 'romance.jpg')
-	addDir('SHOWS','http://www.armagedomfilmes.biz/?cat=30',2,artfolder + 'shows.jpg')
-	addDir('SUSPENSE','http://www.armagedomfilmes.biz/?cat=3239',2,artfolder + 'suspense.jpg')
-	addDir('TERROR','http://www.armagedomfilmes.biz/?cat=3238',2,artfolder + 'terror.jpg')
-	addDir('THRILLER','http://www.armagedomfilmes.biz/?cat=30',2,artfolder + 'thr.jpg')
+	addDir('BLURAY','http://www.armagedomfilmes.biz/?cat=5529',2,artfolder + 'bluray3.png')
+	addDir('LEGENDADOS','http://www.armagedomfilmes.biz/?s=legendado',2,artfolder + 'legendados1.png')
+	addDir('ANIMES','http://www.armagedomfilmes.biz/?cat=36',9,artfolder + 'animes1.png')
+	addDir('ACAO','http://www.armagedomfilmes.biz/?cat=3227',2,artfolder + 'acao1.png')
+	addDir('ANIMACAO','http://www.armagedomfilmes.biz/?cat=3228',2,artfolder + 'animacao1.png')
+	addDir('AVENTURA','http://www.armagedomfilmes.biz/?cat=3230',2,artfolder + 'aventura.png')
+	addDir('COMEDIA ','http://www.armagedomfilmes.biz/?cat=3229',2,artfolder + 'comedia.png')
+	addDir('COMEDIA ROMANTICA','http://www.armagedomfilmes.biz/?cat=3231',2,artfolder + 'comedia-rom.png')
+	addDir('DRAMA','http://www.armagedomfilmes.biz/?cat=3233',2,artfolder + 'drama1.png')
+	addDir('FAROESTE','http://www.armagedomfilmes.biz/?cat=18',2,artfolder + 'faroeste.png')
+	addDir('FICCAO CIENTIFICA','http://www.armagedomfilmes.biz/?cat=3235',2,artfolder + 'ficcao.png')
+	addDir('LUTAS UFC','http://www.armagedomfilmes.biz/?cat=3394',2,artfolder + 'lutas1.jpg')
+	addDir('NACIONAL','http://www.armagedomfilmes.biz/?cat=3226',2,artfolder + 'nacional1.jpg')
+	addDir('POLICIAL','http://www.armagedomfilmes.biz/?cat=72',2,artfolder + 'policial2.jpg')
+	addDir('RELIGIOSO','http://www.armagedomfilmes.biz/?cat=20',2,artfolder + 'religioso1.jpg')
+	addDir('ROMANCE','http://www.armagedomfilmes.biz/?cat=3232',2,artfolder + 'romance1.jpg')
+	addDir('SHOWS','http://www.armagedomfilmes.biz/?cat=30',2,artfolder + 'shows1.jpg')
+	addDir('SUSPENSE','http://www.armagedomfilmes.biz/?cat=3239',2,artfolder + 'suspense1.jpg')
+	addDir('TERROR','http://www.armagedomfilmes.biz/?cat=3238',2,artfolder + 'terror1.jpg')
 	
 def radios():
 	addDir('Nacionais','http://zorro18x.esy.es/Radios/Nacionais',16,'http://cdn5.thecreativefinder.com/userfiles/members/romeuejulieta/26822/optimized-maxW950-D4_900.jpg')
@@ -147,7 +147,7 @@ def listar_series(url):
 			addDir(titulo.encode('utf-8'),serie.a['href'],12,serie.img['src'],True,total)
 		except:
 			pass
-
+	
 	addDir('Página Seguinte >>','http://www.armagedomfilmes.biz/?cat=21&paged='+pagina+'|'+pagina,6,artfolder + 'prox.png')
 	
 def listar_animes(url):
@@ -170,7 +170,7 @@ def listar_animes(url):
 	addDir('Página Seguinte >>',pagenavi,2,artfolder + 'prox.png')
 
 	xbmcplugin.setContent(int(sys.argv[1]), 'movies')
-	xbmc.executebuiltin('Container.SetViewMode(503)')		
+	xbmc.executebuiltin('Container.SetViewMode(500)')		
 	
 	
 def listar_temporadas(url):
@@ -194,6 +194,7 @@ def listar_temporadas(url):
 			except:
 				pass
 		i=i+1
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 		
 		
 
@@ -224,6 +225,7 @@ def listar_series_f2(name,url):
 	for url2, titulo, in a:
 		titulo = titulo.replace('&#8211;',"-").replace('&#8217;',"'").replace('Assistir ','')
 		addDir(titulo,url2,4,'',False,total) 
+	
 
 def obtem_url_dropvideo(url):
 	codigo_fonte = abrir_url(url)
@@ -428,6 +430,7 @@ def pesquisa_filme():
 			url = filme.a["href"]
 			img = filme.img["src"]
 			addDir(titulo.encode('utf8'),url,4,img,False,len(filmes))
+	
 
 def pesquisa_serie():
 	keyb = xbmc.Keyboard('', 'faca a procura') #Chama o keyboard do XBMC com a frase indicada
