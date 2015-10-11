@@ -27,7 +27,7 @@ except:
 h = HTMLParser.HTMLParser()
 
 
-versao = '0.0.6'
+versao = '0.0.7'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -45,7 +45,7 @@ def  menus():
 	addDir('Rádios','-',21,'http://2.bp.blogspot.com/-xkWOLmriFhE/ULkGb49tnpI/AAAAAAAALDk/xL3s1dfAwW0/s640/Bakelite_radio3.png')
 
 	
-	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 
 def  categorias():
@@ -59,8 +59,8 @@ def  categorias():
 	addDir('CANAIS HD','https://copy.com/VMoOgU8UDvAgfjv0?download=1',16,'https://copy.com/WB68NrrmvjxdH1pJ')
 	addDir('MÚSICAS E VIDEOCLIPES','https://copy.com/1cvRyOdMSOCSBH70?download=1',16,'https://copy.com/stpjErgehf9hPtwW')
 	addDir('ESPORTES INTERNACIONAIS','https://copy.com/bIIpBHwFbXMXOBBB?download=1',16,'https://copy.com/pUGvpVMDpoY09PcA')
-		
 	
+	xbmc.executebuiltin('Container.SetViewMode(500)')	
 
 
 def  categorias_tv_paga_brasil():
@@ -71,6 +71,8 @@ def  categorias_tv_paga_brasil():
 	addDir('NOTÍCIAS','https://copy.com/r19WdvfFW4xP7h7Q?download=1',16,'https://copy.com/9wy1vGvZAAbP2Gus')
 	addDir('RELIGIOSOS','https://copy.com/S6Jm2vh2DYJDTEwJ?download=1',16,'https://copy.com/uzJEAXOCWzCUv2up')
 	addDir('VARIEDADES','https://copy.com/DUKhtoZqYdjklcOa?download=1',16,'https://copy.com/pqAXz2FWGHwAIAfU')	
+	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 	##########################################ARMAGEDON#########################################
 #FUNCOES
@@ -83,7 +85,10 @@ def CATEGORIES():
 	addDir('Séries','http://www.armagedomfilmes.biz/?cat=21|1',6,'http://i60.tinypic.com/2lne91h.jpg')
 	addDir('Pesquisar Filmes','-',3,'http://i59.tinypic.com/9tlp9c.jpg')
 	addDir('Pesquisar Series','-',8,'http://i58.tinypic.com/2ptthtf.jpg')
-          
+	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
+   
 	
 def categorias_Armagedon():
 	addDir('BLURAY','http://www.armagedomfilmes.biz/?cat=5529',2,artfolder + 'bluray3.png')
@@ -106,11 +111,18 @@ def categorias_Armagedon():
 	addDir('SUSPENSE','http://www.armagedomfilmes.biz/?cat=3239',2,artfolder + 'suspense1.jpg')
 	addDir('TERROR','http://www.armagedomfilmes.biz/?cat=3238',2,artfolder + 'terror1.jpg')
 	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 def radios():
 	addDir('Nacionais','http://zorro18x.esy.es/Radios/Nacionais',16,'http://cdn5.thecreativefinder.com/userfiles/members/romeuejulieta/26822/optimized-maxW950-D4_900.jpg')
 	addDir('RockRadio','http://zorro18x.esy.es/Radios/RockRadio.txt',16,'http://i.ytimg.com/vi/TLXwKxzPU5U/hqdefault.jpg')
+	addDir('Internacionais','http://zorro18x.esy.es/Radios/Internacional',16,'http://cdn.mundodastribos.com/626313-Nomes-de-grifes-internacionais-como-pronunciar.1-600x600.png')
+	addDir('Relax e Meditação','http://zorro18x.esy.es/Radios/Relax%20e%20Medita%C3%A7%C3%A3o.txt',16,'http://www.terceirabatista.org.br/imagens/grande/EB_meditacao.jpg')
+	addDir('Classic Guitar','http://zorro18x.esy.es/Radios/Classic%20Guitar.txt',16,'http://inacio.com.br/wp-content/uploads/2013/10/tocando-viol%C3%A3o.jpg')
+	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 
-
+   
 	
 def listar_videos(url):
 
@@ -147,8 +159,10 @@ def listar_series(url):
 			addDir(titulo.encode('utf-8'),serie.a['href'],12,serie.img['src'],True,total)
 		except:
 			pass
-	
+		
 	addDir('Página Seguinte >>','http://www.armagedomfilmes.biz/?cat=21&paged='+pagina+'|'+pagina,6,artfolder + 'prox.png')
+	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def listar_animes(url):
 
@@ -225,6 +239,8 @@ def listar_series_f2(name,url):
 	for url2, titulo, in a:
 		titulo = titulo.replace('&#8211;',"-").replace('&#8217;',"'").replace('Assistir ','')
 		addDir(titulo,url2,4,'',False,total) 
+		
+
 	
 
 def obtem_url_dropvideo(url):
@@ -232,9 +248,11 @@ def obtem_url_dropvideo(url):
 	try:
 		soup = BeautifulSoup(codigo_fonte)
 		lista = soup.findAll('script')
-		js = str(lista[9]).replace('<script>',"").replace('</script>',"")
+		#print lista
+		js = str(lista).replace('<script>',"").replace('</script>',"")
+		#print js
 		sUnpacked = jsunpack.unpack(js)
-		print sUnpacked
+		#print sUnpacked
 		url_video = re.findall(r'var vurl2="(.*?)";', sUnpacked)
 		url_video = str(url_video).replace("['","").replace("']","")
 		return [url_video,"-"]
@@ -290,7 +308,7 @@ def player(name,url,iconimage):
 		cloudzilla_f = r'http://www.cloudzilla.to/share/file/(.*?)"'
 		
 		mensagemprogresso = xbmcgui.DialogProgress()
-		mensagemprogresso.create('ArmagedonFilmes', 'A resolver link','Por favor aguarde...')
+		mensagemprogresso.create('LoganTV', 'A resolver link','Por favor aguarde...')
 		mensagemprogresso.update(33)
 		links = []
 		hosts = []
@@ -430,6 +448,7 @@ def pesquisa_filme():
 			url = filme.a["href"]
 			img = filme.img["src"]
 			addDir(titulo.encode('utf8'),url,4,img,False,len(filmes))
+			
 	
 
 def pesquisa_serie():
