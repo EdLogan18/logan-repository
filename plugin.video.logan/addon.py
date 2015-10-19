@@ -27,7 +27,7 @@ except:
 h = HTMLParser.HTMLParser()
 
 
-versao = '0.0.7'
+versao = '0.0.8'
 addon_id = 'plugin.video.logan'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -65,7 +65,7 @@ def  categorias():
 
 def  categorias_tv_paga_brasil():
 	addDir('DOCUMENTÁRIOS','https://copy.com/u3fZuJaCSqXQUNuk?download=1',16,'https://copy.com/9KLabSgitalsvYkg')
-	addDir('ESPORTES','https://copy.com/342Ys8apG9i2Ar9J?download=1',16,'https://copy.com/qJfijQo0kIyxhgsc')	
+	addDir('ESPORTES','http://zorro18x.esy.es/LoganTV/esportes',16,'https://copy.com/qJfijQo0kIyxhgsc')	
 	addDir('FILMES E SÉRIES','https://copy.com/qaC2wr0YHQ3cWgN3?download=1',16,'https://copy.com/9b1kFz9GVNs2CVEg')
 	addDir('INFANTIL','https://copy.com/FH28QXuLwrJY9cXS?download=1',16,'https://copy.com/AAJrU1yDtryoKeqt')	
 	addDir('NOTÍCIAS','https://copy.com/r19WdvfFW4xP7h7Q?download=1',16,'https://copy.com/9wy1vGvZAAbP2Gus')
