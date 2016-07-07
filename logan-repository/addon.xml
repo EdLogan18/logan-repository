@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="logan-repository" name="Logan repository" version="0.0.2" provider-name="EdLogan18">
+<addon id="logan-repository" name="Logan repository" version="0.0.3" provider-name="LoganCorp.">
 	<extension point="xbmc.addon.repository" name="Logan Repository">
 		<info compressed="false">http://raw.github.com/EdLogan18/logan-repository/master/addons.xml</info>
 		<checksum>http://raw.github.com/EdLogan18/logan-repository/master/addons.xml.md5</checksum>
