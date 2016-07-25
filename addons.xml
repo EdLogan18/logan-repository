@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="logan-repository" name="Logan repository" version="0.0.3" provider-name="LoganCorp.">
+<addon id="logan-repository" name="Logan repository" version="0.0.4" provider-name="LoganCorp.">
 	<extension point="xbmc.addon.repository" name="Logan Repository">
 		<info compressed="false">http://raw.github.com/EdLogan18/logan-repository/master/addons.xml</info>
 		<checksum>http://raw.github.com/EdLogan18/logan-repository/master/addons.xml.md5</checksum>
@@ -52,6 +52,24 @@
     <platform>all</platform>
     <forum></forum>
     <website></website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.redecanais" name="[B][COLOR blue]Rede[COLOR white] Canais[/B][/COLOR]" version="0.01" provider-name="Nirjan">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.urlresolver"/>
+	<import addon="script.module.beautifulsoup4"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">Assista os filmes do site redecanais direto no kodi</summary>
+	<description lang="en">Assista os filmes do site Rede Canais direto no kodi  - CrÃ©dito: RedeCanais</description>
+    <platform>all</platform>
   </extension>
 </addon>
 </addons>
