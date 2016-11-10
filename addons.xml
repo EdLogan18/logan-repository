@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="logan-repository" name="Logan repository" version="0.0.7" provider-name="LoganCorp.">
+<addon id="logan-repository" name="Logan repository" version="0.0.8" provider-name="LoganCorp.">
 	<extension point="xbmc.addon.repository" name="Logan Repository">
 		<info compressed="false">http://raw.github.com/EdLogan18/logan-repository/master/addons.xml</info>
 		<checksum>http://raw.github.com/EdLogan18/logan-repository/master/addons.xml.md5</checksum>
@@ -267,6 +267,35 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.listamisterwil"
+       name="Mr-Wil-Stream"
+       version="1.0.0"
+       provider-name="Marcio-Willian e Ali">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Mr-Wil-Stream</summary>
+    <description>Add-on de Lista IPTV Mr-Wil-Stream </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.logan" name="LoganTV" version="0.0.9" provider-name="logan">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -284,6 +313,27 @@
     <summary lang="en">Logan TV</summary>
     <description lang="en">Assista SÃ©ries, Filmes, RÃ¡dios e Tv</description>
 	<platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.logantubemusic" name="LoganTubeMusic" version="1.0.0" provider-name="LoganCorp">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Logan</summary>
+    <description lang="en">Uma seleÃ§Ã£o com os melhores canais de musica do youtube</description>
+    <platform>all</platform>
+    <forum></forum>
+    <website></website>
   </extension>
 </addon>
 
@@ -305,6 +355,31 @@
     <platform>all</platform>
     <forum></forum>
     <website></website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.MediaPlay-TV" name="MediaPlay-TV 3,0" version="3.0" provider-name="HighorDaniel">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" version="3.0.9"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Add-On MediaPlay-TV</summary>
+        <description>Add-On MediaPlay-TV</description>
   </extension>
 </addon>
 
